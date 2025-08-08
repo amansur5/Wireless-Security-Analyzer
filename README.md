@@ -1,81 +1,233 @@
-Wi-Fi Security Analyzer
-Wi-Fi Security Analyzer is a Python-based GUI application built with Tkinter for analyzing Wi-Fi network security. It provides tools for network scanning, handshake capturing, and password cracking using tools like aircrack-ng, aireplay-ng, hashcat, and hcxpcapngtool. This tool is for educational and authorized security testing purposes only. Unauthorized use is illegal.
-Features
+# **Wi-Fi Security Analyzer – Professional Edition**
 
-Network Discovery: Scans for nearby Wi-Fi networks, displaying details like BSSID, ESSID, channel, signal strength, encryption, cipher, and authentication.
-Handshake Capture: Captures WPA/WPA2 handshakes by targeting specific networks and sending deauthentication packets.
-Password Cracking:
-Quick Crack: Uses aircrack-ng for fast dictionary-based cracking without manual BSSID specification.
-Advanced Crack: Allows manual BSSID specification for targeted aircrack-ng cracking.
-Robust Crack: Employs Hashcat for multi-stage attacks (dictionary, hybrid, mask, brute force) with custom wordlist generation.
+A modern, Linux-optimized GUI application for Wi-Fi network security analysis and testing.
+Built with **Python 3** and **Tkinter**, it integrates popular security tools like `aircrack-ng`, `aireplay-ng`, `hashcat`, and `hcxpcapngtool` into an intuitive interface designed for security professionals and researchers.
 
+⚠ **This tool is for educational and authorized penetration testing only. Unauthorized use is illegal.**
 
-User-Friendly Interface: Modern Tkinter GUI with fieldsets (using ttk.LabelFrame) for organized sections, real-time logging, and responsive controls.
-Monitor Mode Management: Automatically enables monitor mode on selected network interfaces.
+---
 
-Prerequisites
+## 🚀 **Features**
 
-Operating System: Linux (recommended, e.g., Kali Linux) for full functionality. Some features may work on Windows/Mac with limitations.
-Root Privileges: Required for network operations (sudo python3 app.py).
-Dependencies:
-Python 3.6+
-Tkinter (included with Python)
-External tools: aircrack-ng, aireplay-ng, iw, tcpdump, hashcat, hcxpcapngtool, crunch
-Install dependencies via requirements.txt (see Installation).
+### **Modern User Interface**
 
+* **Professional Design**: Clean, card-based layout for better navigation
+* **Responsive Layout**: Scales to different screen sizes
+* **Real-time Logging**: Live operation feedback with color-coded messages
+* **Tabbed Navigation**: Separate, organized sections for each functionality
 
+---
 
-Installation
+### **1. Network Discovery**
 
-Clone the repository or download the project files:git clone <repository-url>
+Scan for nearby Wi-Fi networks and view:
+
+* **BSSID, ESSID, Channel**
+* **Signal Strength**
+* **Encryption, Cipher, Authentication**
+* **Automatic Interface Detection**
+* **Monitor Mode Enablement**
+* **Real-Time Updates** during scans
+
+---
+
+### **2. Handshake Capture**
+
+Capture WPA/WPA2 handshakes with:
+
+* **Client Detection** – Identify devices connected to target APs
+* **Deauthentication Attacks** – Force reconnections to capture handshakes
+* **Passive or Active Capture Modes**
+* **File Management** – Save/load `.cap` or `.pcap` files
+
+---
+
+### **3. Password Cracking**
+
+Multiple cracking workflows:
+
+* **Quick Crack** – Fast dictionary-based cracking with auto-BSSID detection
+* **Advanced Crack** – Manual BSSID specification for targeted attacks
+* **Robust Crack (Hashcat)** – Multi-stage attacks: dictionary, hybrid, mask, brute force
+* **Custom Wordlist Generation** – Using `crunch` or defined patterns
+* **Progress Tracking** – Real-time status and verification
+
+---
+
+### **4. Advanced & Support Features**
+
+* **Custom Character Sets** for mask attacks
+* **Background Threading** for non-blocking UI
+* **Comprehensive Logging** with timestamps and color codes
+* **Linux Optimization** – Root privilege checks, interface compatibility
+* **Error Handling** – Friendly messages, validation, and cleanup
+
+---
+
+## 🛠 **Prerequisites**
+
+**Recommended OS:**
+
+* Linux (Kali Linux or Debian-based preferred) for full functionality.
+  Windows/macOS supported with limitations.
+
+**Requirements:**
+
+* **Python 3.6+** (Tkinter included)
+* External Tools:
+
+  ```
+  aircrack-ng
+  aireplay-ng
+  iw
+  tcpdump
+  hashcat
+  hcxpcapngtool
+  crunch
+  ```
+* **Root Privileges** for network operations
+
+---
+
+## 📥 **Installation**
+
+**1. Clone the repository**
+
+```bash
+git clone <repository-url>
 cd wifi_security_analyzer
+```
 
+**2. Install Python dependencies**
 
-Install Python dependencies:pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
 
+**3. Install required system tools**
+*Debian/Kali:*
 
-Install required system tools (on Debian-based systems like Kali Linux):sudo apt-get update
-sudo apt-get install aircrack-ng tcpdump iw hashcat hcxtools crunch
+```bash
+sudo apt-get update
+sudo apt-get install aircrack-ng tcpdump iw hashcat hcxtools crunch python3-tk
+```
 
+*macOS (via Homebrew):*
 
+```bash
+brew install aircrack-ng hashcat tcpdump
+```
 
-Usage
+*Windows:*
+Download & install:
 
-Run the application with root privileges:sudo python3 app.py
+* [Aircrack-ng](https://www.aircrack-ng.org/downloads.html)
+* [Hashcat](https://hashcat.net/hashcat/)
 
+---
 
-Accept the legal disclaimer to proceed.
-Navigate through the tabs:
-Network Discovery: Select an interface, enable monitor mode, and scan for networks. Double-click a network to select it for handshake capture.
-Handshake Capture: Configure BSSID, channel, and client settings, then capture handshakes using deauthentication attacks.
-Quick Crack: Select a handshake file and wordlist for fast cracking with aircrack-ng.
-Advanced Crack: Specify BSSID and wordlist for targeted cracking with aircrack-ng.
-Robust Crack: Use Hashcat for advanced cracking with dictionary, hybrid, mask, or brute-force attacks. Generate custom wordlists with patterns.
+## ▶ **Running the Application**
 
+```bash
+# Linux/macOS
+sudo python3 app.py
 
-Monitor progress via the System Log section at the bottom.
+# Windows (Run as Administrator)
+python app.py
+```
 
-File Structure
+> Root/Administrator privileges are required for network operations.
 
-app.py: Main application script, initializes the Tkinter GUI, sets up styles, and manages tabs.
-network_tab.py: Handles network scanning and interface configuration, displaying results in a table.
-handshake_tab.py: Manages handshake capture with deauthentication options.
-cracking_tab.py: Implements advanced cracking with manual BSSID specification using aircrack-ng.
-quick_crack_tab.py: Provides fast dictionary-based cracking with automatic BSSID detection.
-robust_crack_tab.py: Offers multi-stage Hashcat-based cracking with custom wordlist generation.
-utils.py: Utility functions (e.g., run_command) for executing system commands safely.
-requirements.txt: Lists Python dependencies required for the project.
+---
 
-Legal Disclaimer
-This tool is for educational purposes and authorized security testing only. Unauthorized access to networks is illegal and may result in criminal charges. Use only on networks you own or have explicit written permission to test. Always comply with local laws and regulations.
-Troubleshooting
+## 📋 **Usage Guide**
 
-No interfaces found: Ensure a compatible wireless adapter is connected and supports monitor mode.
-Permission errors: Run the application with sudo to enable network operations.
-Missing dependencies: Install all required tools listed in Prerequisites.
-Scan failures: Verify the interface is in monitor mode and aircrack-ng is installed.
+**1. Network Discovery**
 
-Contributing
-Contributions are welcome! Please submit pull requests or issues via the repository. Ensure compliance with the legal disclaimer in all modifications.
-License
-This project is licensed under the MIT License. See the LICENSE file for details (not included in this structure but recommended to add).
+1. Select interface
+2. Enable monitor mode
+3. Scan for networks
+4. View details in the results table
+
+**2. Handshake Capture**
+
+1. Choose target from scan
+2. Detect connected clients
+3. Perform deauthentication or passive capture
+4. Save handshake file
+
+**3. Cracking**
+
+* **Quick Crack** → Select handshake + wordlist → Start
+* **Advanced Crack** → Specify BSSID + wordlist → Start
+* **Robust Crack** → Configure dictionary/mask/brute force → Run
+
+**4. Monitoring**
+
+* Follow all output in the **System Log** section
+* Color-coded statuses: info, success, error
+
+---
+
+## 📂 **File Structure**
+
+```
+app.py              # Main Tkinter app & tab setup
+network_tab.py      # Interface detection & Wi-Fi scanning
+handshake_tab.py    # Handshake capture logic
+quick_crack_tab.py  # Fast cracking (aircrack-ng)
+cracking_tab.py     # Advanced cracking
+robust_crack_tab.py # Hashcat multi-stage cracking
+utils.py            # Helper functions (command execution, logging)
+requirements.txt    # Python dependencies
+```
+
+---
+
+## ⚠ **Legal Disclaimer**
+
+This software is **only for authorized penetration testing and educational use**.
+By using this tool, you agree to:
+
+* Test **only** networks you own or have explicit written permission to test
+* Comply with all local laws and regulations
+* Take full responsibility for any misuse
+
+Unauthorized access to networks is **illegal** and may lead to criminal charges.
+
+---
+
+## 🛠 **Troubleshooting**
+
+* **No interfaces found** → Ensure adapter supports monitor mode
+* **Permission errors** → Run with `sudo`
+* **Missing dependencies** → Install listed tools
+* **Scan failures** → Ensure interface is in monitor mode & drivers are installed
+
+---
+
+## 🤝 **Contributing**
+
+We welcome contributions:
+
+1. Fork the repo
+2. Create a feature branch
+3. Commit changes
+4. Submit a PR
+
+---
+
+## 📄 **License**
+
+Licensed under the **MIT License** – see `LICENSE` for details.
+
+---
+
+## 🔄 **Version History**
+
+**v2.0.0** – Modern UI, advanced cracking modes, mask attack support, enhanced Linux compatibility, improved error handling.
+**v1.0.0** – Basic functionality, initial release.
+
+---
+
+If you want, I can also **add diagrams or screenshots** of the interface and workflow so your README looks even more polished and GitHub-ready. That will make it much more attractive for users and contributors.
