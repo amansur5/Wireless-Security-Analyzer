@@ -229,5 +229,17 @@ Licensed under the **MIT License** – see `LICENSE` for details.
 **v1.0.0** – Basic functionality, initial release.
 
 ---
+<img width="1022" height="143" alt="Tabs" src="https://github.com/user-attachments/assets/3738bd5b-a06e-488a-a2b6-b3ee6182a990" />
+<img width="1366" height="768" alt="Scanned And Discovered Networks" src="https://github.com/user-attachments/assets/3b8477df-675b-4366-a5cf-3a08847498e7" />
+<img width="1366" height="768" alt="Robust Crack" src="https://github.com/user-attachments/assets/9a39a638-3ead-4141-a449-ba4ab027be2b" />
+<img width="1366" height="768" alt="Robust Crack In Play" src="https://github.com/user-attachments/assets/836cc0a0-6556-4de7-90d2-87dca433eeca" />
+<img width="1366" height="768" alt="Quick Crack" src="https://github.com/user-attachments/assets/4422e869-8e19-4b73-b0b4-b2e80e517506" />
+<img width="1366" height="768" alt="Password Found" src="https://github.com/user-attachments/assets/53172b79-b580-4ac8-a156-86335f08bbf3" />
+<img width="1366" height="768" alt="Password Crack" src="https://github.com/user-attachments/assets/446db5b3-6028-4fa5-88cc-7ea7ca7b06f8" />
+<img width="1366" height="768" alt="Network Discovery" src="https://github.com/user-attachments/assets/13ba0ff2-b3c1-4401-9c46-53d504f3e3e2" />
+<img width="1366" height="768" alt="Handshake and Capture" src="https://github.com/user-attachments/assets/9ee8040c-2092-41be-ab52-f375885d147a" />
+<img width="1366" height="768" alt="Error Please select a device to deauth" src="https://github.com/user-attachments/assets/227b504f-abe3-45c1-ba86-0ee6173d0cdc" />
+<img width="1366" height="768" alt="Deauth In Play" src="https://github.com/user-attachments/assets/15cb5580-f38c-47b7-9aaf-9ce3ebac423b" />
+<img width="1366" height="768" alt="Connected Devices" src="https://github.com/user-attachments/assets/a84aaaef-e57d-4954-816e-d0251fba2de4" />
+<img width="1366" height="768" alt="Capture and Deauth Stopped" src="https://github.com/user-attachments/assets/1daa8cef-c48d-4060-91c0-da1da1d4691c" />
 
-If you want, I can also **add diagrams or screenshots** of the interface and workflow so your README looks even more polished and GitHub-ready. That will make it much more attractive for users and contributors.
