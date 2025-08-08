@@ -1,0 +1,9 @@
+# Wi-Fi Security Analyzer Python dependencies
+# Note: This project primarily uses standard library modules (tkinter, subprocess, re, threading, os, time)
+# No additional Python packages are required via pip, but system tools are needed (see below)
+
+# Python version requirement
+python>=3.6
+
+# System-level dependencies (install via package manager, e.g., apt-get on Debian-based systems):
+# sudo apt-get install aircrack-ng tcpdump iw hashcat hcxtools crunch
